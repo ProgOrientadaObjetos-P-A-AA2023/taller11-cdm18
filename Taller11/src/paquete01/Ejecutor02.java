@@ -43,11 +43,11 @@ public class Ejecutor02 {
         Iterar y crear los objetos según corresponda. Cada objeto generado, 
         agregar al ArrayList lista*/
         // Inicio de solución
-        MenuNinos m1 = null;
+        MenuNino m1 = null;
 
         for (int i = 0; i < datos001.length; i++) {
             for (int j = 0; j < datos001[i].length; j++) {
-                m1 = new MenuNinos(Double.parseDouble(datos001[i][2]),
+                m1 = new MenuNino(Double.parseDouble(datos001[i][2]),
                         Double.parseDouble(datos001[i][3]),
                         datos001[i][0],
                         Double.parseDouble(datos001[i][1]));

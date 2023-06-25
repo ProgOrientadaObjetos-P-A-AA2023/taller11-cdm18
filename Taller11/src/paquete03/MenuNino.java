@@ -10,11 +10,11 @@ import paquete02.Menu;
  *
  * @author carlo
  */
-public class MenuNinos extends Menu{
+public class MenuNino extends Menu{
     protected double valorHelado;
     protected double valorPastel;
 
-    public MenuNinos(double vH, double vP, String nP, double vI) {
+    public MenuNino(double vH, double vP, String nP, double vI) {
         super(nP, vI);
         valorHelado = vH;
         valorPastel = vP;

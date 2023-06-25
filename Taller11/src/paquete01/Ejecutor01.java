@@ -22,10 +22,10 @@ public class Ejecutor01 {
         // TODO code application logic here
         ArrayList<Menu> menus = new ArrayList();
 
-        MenuNinos mN1 = new MenuNinos(1, 1.5, "Niños 01", 2);
+        MenuNino mN1 = new MenuNino(1, 1.5, "Niños 01", 2);
         menus.add(mN1);
 
-        MenuNinos mN2 = new MenuNinos(1, 1.5, "Niños 02", 3);
+        MenuNino mN2 = new MenuNino(1, 1.5, "Niños 02", 3);
         menus.add(mN2);
 
         MenuEconomico mE = new MenuEconomico(25, "Econo 001", 4);
