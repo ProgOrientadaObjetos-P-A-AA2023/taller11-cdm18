@@ -5,6 +5,10 @@
  */
 package paquete01;
 
+import java.util.ArrayList;
+import paquete02.*;
+import paquete03.*;
+
 /**
  *
  * @author reroes
@@ -16,9 +20,43 @@ public class Ejecutor01 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        ArrayList<Menu> menus = new ArrayList();
+
+        MenuNinos mN1 = new MenuNinos(1, 1.5, "Niños 01", 2);
+        mN1.calcularValorMenuCancelar();
+        menus.add(mN1);
+
+        MenuNinos mN2 = new MenuNinos(1, 1.5, "Niños 02", 3);
+        mN2.calcularValorMenuCancelar();
+        menus.add(mN2);
+
+        MenuEconomico mE = new MenuEconomico(25, "Econo 001", 4);
+        mE.calcularValorMenuCancelar();
+        menus.add(mE);
+
+        MenuDia mD = new MenuDia(1, 1, "Dia 001", 5);
+        mD.calcularValorMenuCancelar();
+        menus.add(mD);
+
+        MenuCarta mC = new MenuCarta(1.5, 2, 10, "Carta 001", 6);
+        mC.calcularValorMenuCancelar();
+        menus.add(mC);
+        
+        Cuenta c1 = new Cuenta("René Elizalde", menus, 10);
+
+        System.out.printf("Factura\n"
+                + "Cliente: %s\n", c1.getNombreCliente());
+        
+        for (int i = 0; i < menus.size(); i++) {
+            System.out.println(menus.get(i));
+        }
+        c1.setSubtotal();
+        c1.calcularValorCancelar();
+        System.out.println(c1);
+
+
     }
-    
-    
+
 }
 // lo que debe presentar
 /*
@@ -63,4 +101,4 @@ Subtotal: 30,1
 IVA: 10,0%
 Total a pagar: 33,110
 
-*/
+ */
